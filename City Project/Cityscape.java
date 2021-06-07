@@ -1,6 +1,9 @@
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import javax.swing.JComponent;
+import java.awt.*;
+    import java.util.*;
+
+    import java.awt.Graphics;
+    import java.awt.Graphics2D;
+    import javax.swing.JComponent;
 
 /**
  * Class that creates instances of the classes that comprise the cityscape and delegates drawing the
@@ -13,12 +16,46 @@ public class Cityscape extends JComponent
 {
     // define the objects in your Cityscape as instance variables
     // ...
-    
+    private int x;
+    private building building1;
+    private building building2;
+    private building building3; 
+    private building building4; 
+    private building building5; 
+    private building building6; 
+    private building building7; 
+    private building building8;
+    private building building9; 
+    private building building10; 
+    private sky sky1;
+    private sun sun1; 
+    private sun sun2; 
+    private grass grass1; 
+    private road road1;
+    private int r = 0;
+    private Color color;   
     
     
     // define the Cityscape contructor and intiailize all instance variables
     // ...
-    
+    //x,y,length1,width1
+    public Cityscape() 
+    {   sky1 = new sky(); 
+        sun1 = new sun();
+        grass1 = new grass();
+        road1 = new road(); 
+        building1 = new building(10,100,100,235,Color.green);//200
+        building2 = new building(125,100,200,342,Color.red);//450
+        building3 = new building(350,100,150,523,Color.magenta);//600 
+        building4 = new building(525,100,110,400,Color.yellow);//860
+        building5 = new building (700,100,130,390,Color.cyan); //1173
+        building6 = new building(900,100,123,189,Color.orange); //1323
+        building7 = new building (1050,100,210,600,color = new Color (229, 255, 204)); //1800  
+        building8 = new building (1300,100,110,210,Color.darkGray); //1610
+        building9 = new building (1500,100,150,290,Color.pink); //1850
+        building10 = new building (1700,100,133,232,Color.lightGray); //2132
+        
+    }
     
     /**
      * This method is invoked by the Java Run-Time whenever the component needs to be redrawn.
@@ -32,8 +69,22 @@ public class Cityscape extends JComponent
     {
         Graphics2D g2 = (Graphics2D) g;
         
-        // invoke the draw method on each object in your Cityscape
-        // ...
+        sky1.draw(g2); 
+        sun1.draw(g2); 
+        grass1.draw(g2); 
+        road1.draw(g2); 
+        building1.draw(g2); 
+        //building2.draw(g2); 
+         
+        building2.draw(g2); 
+        building3.draw(g2);
+        building4.draw(g2);
+        building5.draw(g2);
+        building6.draw(g2);
+        building7.draw(g2);
+        building8.draw(g2);
+        building9.draw(g2);
+        building10.draw(g2);
         
         
     }
@@ -47,12 +98,15 @@ public class Cityscape extends JComponent
     {
         // update the objects in the cityscape so they are animated
         // ...
-        
-        
+        r++; 
+         
+         sun1.move(r); 
+         sun1.moon(r); 
+         sky1.night(r); 
         
         // request that the Java Runtime repaints this component by invoking its paintComponent method
         //  do not explicitly invoke the paintComponent method
-        repaint();
+        repaint(); 
     }
 
 }
