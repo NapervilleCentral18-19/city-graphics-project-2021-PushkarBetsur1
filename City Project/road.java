@@ -28,7 +28,14 @@ public class road extends JComponent
           
         page.setColor(Color.black); 
         page.drawRect(0,800,2000,200); 
-        page.fillRect(0,800,2000,200);  
+        page.fillRect(0,800,2000,200); 
+        page.setColor(Color.white); 
+        //this creates the white line on the road
+        for (int i = 0; i < 2000; i++)
+        { if(i % 3 == 0){
+            page.drawLine(i,900,i+1,900); 
+        }
+    }
         page.setColor(Color.gray);
         page.drawRect(0,750,2000,70); 
         page.fillRect(0,750,2000,70); 

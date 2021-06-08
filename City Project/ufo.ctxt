@@ -1,12 +1,12 @@
 #BlueJ class context
-comment0.target=building
+comment0.target=ufo
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ building\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=xpos\ ypos\ length\ width\ color
-comment1.target=building(int,\ int,\ int,\ int,\ java.awt.Color)
+comment1.params=
+comment1.target=ufo()
 comment2.params=page
 comment2.target=void\ draw(java.awt.Graphics2D)
 comment3.params=g
 comment3.target=void\ paintComponent(java.awt.Graphics)
 comment4.params=r
-comment4.target=void\ windowchange(int)
+comment4.target=void\ hover(int)
 numComments=5

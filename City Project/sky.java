@@ -1,5 +1,4 @@
-
-   import java.awt.*;
+ import java.awt.*;
     import java.util.*;
 
     import java.awt.Graphics;
@@ -36,6 +35,7 @@
         Graphics2D g2 = (Graphics2D) g;
         draw(g2);                 
      }
+     //what changes the colors of the sky to match the time of the day
      public void night(int r)
      {
          if (r > 60) 

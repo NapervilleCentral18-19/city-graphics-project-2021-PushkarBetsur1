@@ -1,33 +1,63 @@
-
-/**
- * Write a description of class car here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class car
-{
-    // instance variables - replace the example below with your own
-    private int x;
-
+ import java.awt.*;
+ import java.util.*;
+ import java.awt.Graphics;
+ import java.awt.Graphics2D;
+ import javax.swing.JComponent;
+ 
     /**
-     * Constructor for objects of class car
-     */
-    public car()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
+     * Write a description of class building here.
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @author (your name)
+     * @version (a version number or a date)
      */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public class car extends JComponent 
+ {      
+       private Color color; 
+       private Color color3 = new Color (255,255,255); 
+       private int height;
+       private int width; 
+       private int a,b; 
+       
+       Random generator = new Random(); 
+     public car (Color color1)
+     {
+         a = -100;
+         b = 850; 
+         color = color1; 
+        
+         
+     }
+     public void draw (Graphics2D page) 
+     { 
+         // makes the bottom of the car 
+        page.setColor(color);
+        page.drawRect(a,b,35,15); 
+        page.drawRect(a+10,b-10,12,29); 
+        page.fillRect(a,b,35,15);
+        page.fillRect(a+10,b-10,12,29);
+        // makes top of the car 
+        page.setColor(color3); 
+        page.drawOval(a+5,b+10,10,10);
+        page.drawOval(a+25,b+10,10,10);
+        page.fillOval(a+5,b+10,10,10);
+        page.fillOval(a+25,b+10,10,10);
+     }
+    
+     public void paintComponent(Graphics g)
+     {  
+        
+        Graphics2D g2 = (Graphics2D) g;
+        draw(g2);                 
     }
+     public void drive (int r)
+     {
+         if (r > 0)
+        {
+             a += 10;
+             b += 0; 
+        }
+          
+     }
+     
+        
 }
